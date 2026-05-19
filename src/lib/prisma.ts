@@ -18,7 +18,7 @@ export interface BlogPost {
   title: string;
   content: string;
   imageUrl: string | null;
-  date?: Date;
+  date: Date;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -296,7 +296,6 @@ export const prisma = {
         id: generateRandomId(),
         createdAt: new Date(),
         updatedAt: new Date(),
-        imageUrl: null,
         ...options.data
       };
       menuItemsStore.push(newItem);
@@ -334,12 +333,12 @@ export const prisma = {
       const id = Number(options.where.id);
       return blogPostsStore.find(post => post.id === id) || null;
     },
-    create: async (options: { data: Omit<BlogPost, 'id' | 'createdAt' | 'updatedAt'> }) => {
+    create: async (options: { data: Omit<BlogPost, 'id' | 'createdAt' | 'updatedAt' | 'date'> & { date?: Date } }) => {
       const newPost: BlogPost = {
         id: generateRandomId(),
+        date: options.data.date || new Date(),
         createdAt: new Date(),
         updatedAt: new Date(),
-        imageUrl: null,
         ...options.data
       };
       blogPostsStore.push(newPost);
@@ -369,7 +368,6 @@ export const prisma = {
       const newMessage: ContactMessage = {
         id: generateRandomId(),
         createdAt: new Date(),
-        phone: null,
         ...options.data
       };
       contactMessagesStore.push(newMessage);
