@@ -18,7 +18,7 @@ export interface BlogPost {
   title: string;
   content: string;
   imageUrl: string | null;
-  date: Date;
+  date?: Date;
   createdAt: Date;
   updatedAt: Date;
 }
