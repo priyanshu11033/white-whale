@@ -1,0 +1,114 @@
+.hero {
+  background: url('/images/1.png') center/cover;
+  position: relative;
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(14, 75, 90, 0.8);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.detailsSection {
+  padding: 80px 0;
+  background-color: var(--bg-light);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.imageContainer {
+  flex: 1;
+}
+
+.image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.infoContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.category {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 2rem;
+  color: var(--accent);
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  line-height: 1.8;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+.backButton {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  align-self: flex-start;
+}
+
+.backButton:hover {
+  background-color: var(--primary-light);
+}
+
+.notFound {
+  text-align: center;
+  padding: 150px 0;
+  font-size: 1.5rem;
+  color: var(--primary);
+}

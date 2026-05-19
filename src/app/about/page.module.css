@@ -1,0 +1,133 @@
+.hero {
+  height: 400px;
+  background: url('/images/26.png') center/cover;
+}
+
+.content {
+  padding: 80px 0;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--primary);
+}
+
+.text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+.lifestyle {
+  background-color: var(--bg-light);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.lifestyleTitle {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+.quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--text-dark);
+  opacity: 0.8;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  position: relative;
+}
+
+.quote::before {
+  content: '“';
+  font-size: 4rem;
+  color: var(--primary);
+  opacity: 0.2;
+  position: absolute;
+  top: -20px;
+  left: -40px;
+}
+
+.team {
+  padding: 80px 0;
+  text-align: center;
+  background-color: white;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.teamMember img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.teamMember h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.teamMember p {
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .teamGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.zagat {
+  display: flex;
+  background-color: var(--bg-light);
+}
+
+.zagatImg {
+  flex: 1;
+  background: url('/images/25.png') center/cover;
+  min-height: 400px;
+}
+
+.zagatContent {
+  flex: 1;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hiring {
+  padding: 100px 0;
+  text-align: center;
+  background-color: white;
+}
+
+.cta {
+  font-size: 2rem;
+  text-align: center;
+  padding: 60px 0;
+  background-color: var(--bg-light);
+}
+
+.ctaLink {
+  color: var(--secondary);
+  text-decoration: none;
+}

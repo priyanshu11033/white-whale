@@ -1,0 +1,144 @@
+.topbar {
+  background-color: var(--primary-light);
+  color: var(--text-light);
+  font-size: 0.85rem;
+  padding: 8px 0;
+}
+
+.topbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbarItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar {
+  background-color: var(--primary);
+  color: var(--text-light);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.logoSubtitle {
+  font-size: 0.8rem;
+  font-family: var(--font-cursive);
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  color: var(--text-light);
+  display: block;
+}
+
+.navLinks {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.navLink {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.navLink:hover, .active {
+  color: var(--accent);
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.cartIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: var(--accent);
+  color: var(--text-dark);
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary);
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  }
+  .navLinks.open {
+    display: flex;
+  }
+  .topbarContainer {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+}

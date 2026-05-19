@@ -1,0 +1,116 @@
+.hero {
+  background: url('/images/38.png') center/cover;
+  position: relative;
+  padding: 150px 0;
+  text-align: center;
+  color: white;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(14, 75, 90, 0.7);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.menuNav {
+  background: white;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--gray-light);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.menuNavLink {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  transition: color 0.3s;
+}
+
+.menuNavLink:hover {
+  color: var(--secondary);
+}
+
+.menuSection {
+  padding: 80px 0;
+  background-color: var(--bg-light);
+}
+
+.categoryTitle {
+  font-size: 2.5rem;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.menuGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.menuItem {
+  display: flex;
+  gap: 20px;
+}
+
+.menuItemImg {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.menuItemContent {
+  flex: 1;
+}
+
+.menuItemHeader {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.menuItemName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.menuItemPrice {
+  font-size: 1.2rem;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.menuItemDesc {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  opacity: 0.7;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 100px 0;
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  opacity: 0.7;
+}
